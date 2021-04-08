@@ -1,0 +1,107 @@
+.flexbox{
+    /*Skapar en flexbox */
+    display: flex;
+
+    /*Om man ändrar flex-direction kommer de olika alignsakerna att förändras. med -90 grader.*/
+    flex-direction: row;
+    /*Gör så att plats är lika mycket utspritt överallt på main axis.*/
+    justify-content: space-around;
+
+    /*Gör så att alla är vertikalt centrerade.*/
+    align-items: center;
+
+    /* Sakerna innuti flexboxen kommer wrapa. Dvs fortsätta på raden under.*/
+    flex-wrap: wrap;
+
+    /*Fungerar endast när det är flex-wrap: wrap; alignar items vertikalt om flex-direction är row.*/
+    align-content: center;
+
+    /*Gör så att elementet inte shrinkar oavsett om fönstret blir midnre eller inte. Behåller sin width.*/
+    flex-shrink: 0;
+
+    /* Använd resterande plats om detta appliceras på ett element*/
+    flex-grow: 1;
+}
+
+
+/* CSS GRID*/
+main {
+    display: grid;
+    grid-template-areas: 
+        "topbar topbar topbar"
+        "ads content sidebar"
+        "footer footer footer";
+        /* fr - fraction = hur stor del utav widthen på sidan den tar upp*/
+        /* antalet nummer där definierar hur många columner vi ska ha*/
+
+        /*
+            för att applicera detta till en klass gör man:
+            .grid-item-1{
+                grid-area: topbar;
+            }
+            .grid-item-2{
+                grid-area: ads;
+            }
+        */
+    grid-template: 1fr 3fr 1fr;
+    grid-template-rows: 50px auto 70px;
+    align-items: center;
+    /* Hur hög raden ör */
+    grid-auto-rows: 150px; /* minmax(150px, auto) gör så att den är minst 150px*/ 
+
+
+    grid-row-gap: 20px; /* typ som marginvertical mellan olika rows.*/
+    grid-row-gap: 20px; /* typ som marginhorizontal mellan olika rows.*/
+    grid-gap: 20px; /* Båda åvanstående. */
+
+    /* Vart elementet i griden ska starta*/
+    grid-column-start: 1;
+    /* Vart elementet i griden ska sluta*/
+    grid-column-start: 3;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .item:nth-child(6) {
+    background: #e91e63;
+  }
+
+  /*
+    :first-child
+
+    :last-child
+
+    :only-child
+
+    :nth-child()
+
+    :nth-last-child()
+
+    
+  */
+
+
+  a:link {
+    color: #FF0000;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #00FF00;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #FF00FF;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #0000FF;
+  }

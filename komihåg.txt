@@ -1,0 +1,3 @@
+- Fibonicca
+- Fizzbuzz
+- Bubblesort

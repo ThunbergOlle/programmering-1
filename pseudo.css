@@ -1,0 +1,11 @@
+article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+} 
+article p::first-letter {
+    font-size: 120%;
+    font-weight: bold;
+} 
+article p::before {
+    content: "<3";
+} 
