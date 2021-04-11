@@ -1,4 +1,4 @@
-let input = 'mesas';
+let input = 'messa';
 
 /*
     1. Kolla genom inputen.
@@ -19,11 +19,13 @@ let iterations = 0;
 
 /* Tar in strängen att editera som input */
 function moveFirstChar(string){
-    /* Checkar om iterationen har gått genom alla möjliga tal (och eventuellt lite mer) samt om längden på strängen inte stämmer överens */
-    if(iterations > string.length**2 || string.length !== matchAgainst.length) return 'Ej anagram';
     /* Om det stämmer så returnera att det fungerade. */
+    iterations ++;
+
     if(string === matchAgainst) return 'Sesam öppnar sig';
     /* Konvertera strängen till en array */
+    
+
     const s = string.split('');
     
     /* Loopa genom strängen som en array med start på nummer 1. */
@@ -39,11 +41,14 @@ function moveFirstChar(string){
         console.log(result);
         
         /* Kolla om den stämmer */
-        if(result === matchAgainst) return 'Sesam öppnar sig';
+        if(result === matchAgainst) console.log( 'Sesam öppnar sig');
      
+        iterations ++;
     }
+    console.log("input: " + string, input);
+    if(string === input && iterations > 6) return iterations;
+
     let result = s.join('');
-    iterations ++;
     return moveFirstChar(result);
 }
 console.log(moveFirstChar(input));
