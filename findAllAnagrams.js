@@ -5,12 +5,22 @@ let input = 'fyra';
     2. Flytta nuvarande index ett steg åt höger tills vi kommer till slutet
     3. Gör så med nästa bokstav tills du har testat med alla.
 
-    // tre -> rte -> ret
+    // tre -> ter -> ret
     // ret -> ert -> etr
     // etr -> ter -> tre
 
 */
 
+
+
+/**
+ * 
+ * Börja med den första bokstaven,
+ * Sen ändra ALLA följade bokstäver
+ * 
+ * 
+ * 
+ */
 /* Den sträng som vi ska jämföra vår input mot  */
 let matchAgainst = 'fyra';
 
